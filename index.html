@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Himanshu Nakrani — Full Stack Developer & Software Engineer. Portfolio showcasing projects, skills and experience." />
+  <meta name="keywords" content="Himanshu Nakrani, Full Stack Developer, Software Engineer, Portfolio, Web Developer" />
+  <meta name="author" content="Himanshu Nakrani" />
+  <meta property="og:title" content="Himanshu Nakrani | Portfolio" />
+  <meta property="og:description" content="Full Stack Developer & Software Engineer — building scalable, impactful software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://himanshunakrani.me" />
+  <title>Himanshu Nakrani | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ═══════════════════════ PRELOADER ═══════════════════════ -->
+  <div id="preloader">
+    <div class="loader">
+      <span class="loader-text">HN</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ CURSOR ═══════════════════════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- ═══════════════════════ HEADER / NAV ═══════════════════════ -->
+  <header id="header">
+    <nav class="navbar container">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">&lt;</span>HN<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <section id="hero" class="hero-section">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-content container">
+        <div class="hero-text">
+          <p class="hero-greeting reveal-text">👋 Hello, World! I'm</p>
+          <h1 class="hero-name reveal-text">
+            Himanshu<br /><span class="gradient-text">Nakrani</span>
+          </h1>
+          <div class="hero-roles">
+            <span class="role-prefix">I am a&nbsp;</span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-description reveal-text">
+            Passionate about crafting <strong>scalable</strong>, <strong>efficient</strong> and
+            <strong>elegant</strong> software solutions. I turn ideas into impactful digital experiences.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-rocket"></i> View My Work
+            </a>
+            <a href="resume-placeholder.pdf" class="btn btn-outline" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/himanshu-nakrani-75" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/himanshunakrani" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/himanshunakrani" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="mailto:himanshu@himanshunakrani.me" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-avatar-wrapper">
+            <div class="hero-avatar">
+              <img src="https://ui-avatars.com/api/?name=Himanshu+Nakrani&size=300&background=6366f1&color=fff&bold=true&format=svg" alt="Himanshu Nakrani" />
+            </div>
+            <div class="avatar-ring ring-1"></div>
+            <div class="avatar-ring ring-2"></div>
+            <div class="floating-badge badge-1">
+              <i class="fas fa-code"></i>
+              <span>Full Stack</span>
+            </div>
+            <div class="floating-badge badge-2">
+              <i class="fas fa-star"></i>
+              <span>Open Source</span>
+            </div>
+            <div class="floating-badge badge-3">
+              <i class="fas fa-bolt"></i>
+              <span>Fast Learner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════ STATS ═══════════════════════ -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card" data-aos>
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-number" data-count="25">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-card" data-aos>
+            <div class="stat-number" data-count="100">0</div>
+            <div class="stat-suffix">%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">Get to Know Me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-wrapper" data-aos>
+            <div class="about-image-frame">
+              <img src="https://ui-avatars.com/api/?name=Himanshu+Nakrani&size=400&background=6366f1&color=fff&bold=true&format=svg" alt="About Himanshu" />
+              <div class="experience-badge">
+                <span class="exp-years">3+</span>
+                <span class="exp-text">Years of<br/>Experience</span>
+              </div>
+            </div>
+            <div class="about-decoration"></div>
+          </div>
+          <div class="about-content" data-aos>
+            <h3 class="about-title">Full Stack Developer &amp; Software Engineer</h3>
+            <p class="about-text">
+              Hi! I'm <strong>Himanshu Nakrani</strong>, a passionate full stack developer based in India.
+              I specialize in building high-performance web applications and scalable backend systems.
+              With a strong foundation in computer science and a love for clean, maintainable code,
+              I strive to create software that makes a real difference.
+            </p>
+            <p class="about-text">
+              When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+              projects, or sharing knowledge with the developer community. I believe in continuous learning
+              and pushing the boundaries of what's possible.
+            </p>
+            <div class="about-info-grid">
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-user"></i> Name</span>
+                <span class="info-value">Himanshu Nakrani</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                <span class="info-value">India</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
+                <span class="info-value">himanshu@himanshunakrani.me</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label"><i class="fas fa-briefcase"></i> Status</span>
+                <span class="info-value available">Available for work</span>
+              </div>
+            </div>
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Let's Talk
+              </a>
+              <a href="resume-placeholder.pdf" class="btn btn-outline" download>
+                <i class="fas fa-file-pdf"></i> My Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">What I Work With</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        </div>
+
+        <!-- Skill Categories Tabs -->
+        <div class="skill-tabs" data-aos>
+          <button class="skill-tab active" data-tab="all">All</button>
+          <button class="skill-tab" data-tab="frontend">Frontend</button>
+          <button class="skill-tab" data-tab="backend">Backend</button>
+          <button class="skill-tab" data-tab="tools">Tools &amp; DevOps</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Frontend -->
+          <div class="skill-card" data-category="frontend" data-aos>
+            <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>HTML5</span><span>95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="frontend" data-aos>
+            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>CSS3 / Tailwind</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="frontend" data-aos>
+            <div class="skill-icon js"><i class="fab fa-js"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>JavaScript / TypeScript</span><span>88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="frontend" data-aos>
+            <div class="skill-icon react"><i class="fab fa-react"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>React.js / Next.js</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="skill-card" data-category="backend" data-aos>
+            <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>Node.js / Express</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="backend" data-aos>
+            <div class="skill-icon python"><i class="fab fa-python"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>Python / Django</span><span>78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="backend" data-aos>
+            <div class="skill-icon java"><i class="fab fa-java"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>Java / Spring Boot</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="backend" data-aos>
+            <div class="skill-icon db"><i class="fas fa-database"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>SQL / MongoDB / Redis</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="skill-card" data-category="tools" data-aos>
+            <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>Git / GitHub</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="tools" data-aos>
+            <div class="skill-icon docker"><i class="fab fa-docker"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>Docker / Kubernetes</span><span>72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="tools" data-aos>
+            <div class="skill-icon aws"><i class="fab fa-aws"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>AWS / GCP</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+          <div class="skill-card" data-category="tools" data-aos>
+            <div class="skill-icon linux"><i class="fab fa-linux"></i></div>
+            <div class="skill-info">
+              <div class="skill-header"><span>Linux / CI/CD</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        </div>
+        <div class="timeline" id="experienceTimeline">
+          <div class="timeline-item" data-aos>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Senior Software Developer</h3>
+                  <span class="timeline-company"><i class="fas fa-building"></i> TechCorp Solutions Pvt. Ltd.</span>
+                </div>
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Jan 2023 – Present</span>
+              </div>
+              <p class="timeline-desc">
+                Led development of microservices-based architecture serving 100K+ daily active users.
+                Improved system performance by 40% through caching strategies and query optimization.
+                Mentored junior developers and conducted code reviews.
+              </p>
+              <div class="timeline-tags">
+                <span>React</span><span>Node.js</span><span>AWS</span><span>PostgreSQL</span><span>Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Full Stack Developer</h3>
+                  <span class="timeline-company"><i class="fas fa-building"></i> InnovateSoft Technologies</span>
+                </div>
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Jun 2021 – Dec 2022</span>
+              </div>
+              <p class="timeline-desc">
+                Built and maintained multiple client-facing web applications. Collaborated with cross-functional
+                teams to deliver features on time. Integrated third-party APIs and payment gateways.
+              </p>
+              <div class="timeline-tags">
+                <span>Vue.js</span><span>Python</span><span>Django</span><span>MySQL</span><span>Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Software Developer Intern</h3>
+                  <span class="timeline-company"><i class="fas fa-building"></i> StartupHub India</span>
+                </div>
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Jan 2021 – May 2021</span>
+              </div>
+              <p class="timeline-desc">
+                Worked on frontend development using React and contributed to REST API development.
+                Participated in agile sprints and daily standups. Wrote unit and integration tests.
+              </p>
+              <div class="timeline-tags">
+                <span>React</span><span>Express</span><span>MongoDB</span><span>Jest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="project-filters" data-aos>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <div class="project-card featured" data-category="fullstack" data-aos>
+            <div class="project-image">
+              <img src="https://placehold.co/600x380/6366f1/ffffff?text=E-Commerce+Platform" alt="E-Commerce Platform" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live Demo" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+              <span class="project-featured-badge"><i class="fas fa-star"></i> Featured</span>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Full Stack</div>
+              <h3 class="project-title">E-Commerce Platform</h3>
+              <p class="project-desc">
+                A full-featured e-commerce platform with real-time inventory management, secure payment
+                processing, admin dashboard, and product recommendation engine using ML.
+              </p>
+              <div class="project-stack">
+                <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Stripe</span><span>Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack" data-aos>
+            <div class="project-image">
+              <img src="https://placehold.co/600x380/8b5cf6/ffffff?text=Task+Management+App" alt="Task Management App" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live Demo" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Full Stack</div>
+              <h3 class="project-title">TaskFlow – Project Manager</h3>
+              <p class="project-desc">
+                A collaborative project management tool with real-time updates, Kanban boards,
+                team management, and advanced analytics dashboard.
+              </p>
+              <div class="project-stack">
+                <span>React</span><span>Socket.io</span><span>Express</span><span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="backend" data-aos>
+            <div class="project-image">
+              <img src="https://placehold.co/600x380/06b6d4/ffffff?text=REST+API+Service" alt="REST API Service" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live Demo" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Backend</div>
+              <h3 class="project-title">Microservices REST API</h3>
+              <p class="project-desc">
+                Scalable microservices architecture with API Gateway, JWT authentication,
+                rate limiting, and comprehensive Swagger documentation.
+              </p>
+              <div class="project-stack">
+                <span>Node.js</span><span>Docker</span><span>RabbitMQ</span><span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="frontend" data-aos>
+            <div class="project-image">
+              <img src="https://placehold.co/600x380/10b981/ffffff?text=Analytics+Dashboard" alt="Analytics Dashboard" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live Demo" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Frontend</div>
+              <h3 class="project-title">Analytics Dashboard</h3>
+              <p class="project-desc">
+                Interactive data visualization dashboard with real-time charts, filters,
+                dark/light mode and responsive design built with D3.js.
+              </p>
+              <div class="project-stack">
+                <span>React</span><span>D3.js</span><span>TypeScript</span><span>Tailwind</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="fullstack" data-aos>
+            <div class="project-image">
+              <img src="https://placehold.co/600x380/f59e0b/ffffff?text=Social+Media+App" alt="Social Media App" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live Demo" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">Full Stack</div>
+              <h3 class="project-title">Social Media Platform</h3>
+              <p class="project-desc">
+                A modern social platform with posts, stories, real-time chat, notifications,
+                and a content feed powered by a recommendation algorithm.
+              </p>
+              <div class="project-stack">
+                <span>Next.js</span><span>GraphQL</span><span>Prisma</span><span>WebSockets</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="backend" data-aos>
+            <div class="project-image">
+              <img src="https://placehold.co/600x380/ef4444/ffffff?text=DevOps+Pipeline" alt="DevOps Pipeline" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link" aria-label="Live Demo" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="#" class="project-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-category">DevOps</div>
+              <h3 class="project-title">CI/CD Pipeline Automation</h3>
+              <p class="project-desc">
+                Automated deployment pipeline with Docker containerization, Kubernetes orchestration,
+                and GitHub Actions workflows for seamless deployments.
+              </p>
+              <div class="project-stack">
+                <span>Docker</span><span>K8s</span><span>GitHub Actions</span><span>AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-more" data-aos>
+          <a href="https://github.com/himanshu-nakrani-75" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab fa-github"></i> View All on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        </div>
+        <div class="timeline" id="educationTimeline">
+          <div class="timeline-item" data-aos>
+            <div class="timeline-dot edu"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Bachelor of Technology – Computer Science</h3>
+                  <span class="timeline-company"><i class="fas fa-university"></i> XYZ University, India</span>
+                </div>
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2017 – 2021</span>
+              </div>
+              <p class="timeline-desc">
+                Graduated with Distinction (CGPA: 8.9/10). Specialized in Software Engineering and
+                Database Systems. Final year project on distributed computing awarded Best Project.
+              </p>
+              <div class="timeline-tags">
+                <span>Data Structures</span><span>Algorithms</span><span>OS</span><span>DBMS</span><span>Networking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos>
+            <div class="timeline-dot edu"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Higher Secondary (12th Science)</h3>
+                  <span class="timeline-company"><i class="fas fa-school"></i> ABC Higher Secondary School</span>
+                </div>
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2015 – 2017</span>
+              </div>
+              <p class="timeline-desc">
+                Completed with 92% marks in PCM (Physics, Chemistry, Mathematics).
+                Active member of the Science Club and Coding Club.
+              </p>
+              <div class="timeline-tags">
+                <span>Mathematics</span><span>Physics</span><span>Chemistry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certs-section" data-aos>
+          <h3 class="certs-title">Certifications &amp; Achievements</h3>
+          <div class="certs-grid">
+            <div class="cert-card" data-aos>
+              <div class="cert-icon"><i class="fab fa-aws"></i></div>
+              <div class="cert-info">
+                <h4>AWS Certified Developer – Associate</h4>
+                <span>Amazon Web Services · 2023</span>
+              </div>
+              <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="cert-card" data-aos>
+              <div class="cert-icon"><i class="fab fa-google"></i></div>
+              <div class="cert-info">
+                <h4>Google Associate Cloud Engineer</h4>
+                <span>Google Cloud · 2022</span>
+              </div>
+              <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="cert-card" data-aos>
+              <div class="cert-icon"><i class="fas fa-code"></i></div>
+              <div class="cert-info">
+                <h4>Meta Full Stack Developer Certificate</h4>
+                <span>Meta / Coursera · 2022</span>
+              </div>
+              <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="cert-card" data-aos>
+              <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="cert-info">
+                <h4>CompTIA Security+</h4>
+                <span>CompTIA · 2023</span>
+              </div>
+              <a href="#" class="cert-link" aria-label="View Certificate"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ TESTIMONIALS ═══════════════════════ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">Kind Words</span>
+          <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+        </div>
+        <div class="testimonials-slider" data-aos>
+          <div class="testimonials-track" id="testimonialsTrack">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Himanshu is an exceptional developer who consistently delivers high-quality code.
+                His ability to translate complex requirements into elegant solutions is remarkable."
+              </p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&size=60&background=6366f1&color=fff&format=svg" alt="Rahul Sharma" />
+                <div>
+                  <strong>Rahul Sharma</strong>
+                  <span>CTO, TechCorp Solutions</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Working with Himanshu was a great experience. He's proactive, detail-oriented,
+                and always brings innovative ideas to the table. A true team player."
+              </p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Priya+Patel&size=60&background=8b5cf6&color=fff&format=svg" alt="Priya Patel" />
+                <div>
+                  <strong>Priya Patel</strong>
+                  <span>Product Manager, InnovateSoft</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Himanshu's technical skills are top-notch. He built our entire backend infrastructure
+                from scratch and it's been running flawlessly with zero downtime."
+              </p>
+              <div class="testimonial-author">
+                <img src="https://ui-avatars.com/api/?name=Amit+Verma&size=60&background=06b6d4&color=fff&format=svg" alt="Amit Verma" />
+                <div>
+                  <strong>Amit Verma</strong>
+                  <span>Founder, StartupHub</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="testimonial-btn" id="prevTestimonial" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="testimonial-dots" id="testimonialDots"></div>
+            <button class="testimonial-btn" id="nextTestimonial" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-subtitle">
+            Have a project in mind or want to hire me? I'd love to hear from you!
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos>
+            <h3>Let's work together</h3>
+            <p>
+              I'm currently open to new opportunities — full-time roles, freelance projects,
+              or interesting collaborations. Drop me a message and I'll get back to you within 24 hours.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:himanshu@himanshunakrani.me">himanshu@himanshunakrani.me</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span>India (Open to Remote)</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                  <span class="contact-label">Response Time</span>
+                  <span>Within 24 hours</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="https://github.com/himanshu-nakrani-75" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/himanshunakrani" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com/himanshunakrani" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-wrapper" data-aos>
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                  <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required />
+                <span class="form-error" id="subjectError"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or opportunity..." required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+              <div class="form-success" id="formSuccess">
+                <i class="fas fa-check-circle"></i>
+                <span>Message sent successfully! I'll be in touch soon.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-bracket">&lt;</span>HN<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Building digital experiences that matter. Always learning, always creating.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="resume-placeholder.pdf" download>Resume</a></li>
+          </ul>
+        </div>
+        <div class="footer-connect">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://github.com/himanshu-nakrani-75" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/himanshunakrani" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/himanshunakrani" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:himanshu@himanshunakrani.me" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Himanshu Nakrani. All rights reserved.</p>
+        <p>Crafted with <i class="fas fa-heart heart-icon"></i> using HTML, CSS &amp; JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
